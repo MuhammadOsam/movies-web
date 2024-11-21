@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(0, 0, 18);
+    /* width: 100vw;
+    height: 100vh; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    color: white ;
+}
+
+.imagemContainer {
+    background-color: black;
+    width: 100%;
+    height: 280px !important;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    color: white;
+}
+
+.imagemContainer::after{
+    content: '';
+    background: rgb(34, 175, 195);
+    background: linear-gradient(0deg, rgba(34, 175, 195, 1) 0%, rgba(253, 187, 45, 0) 64%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -250px;
+    padding: 120px;
+    transition: all 0.5s cubic-bezier(0.19, -0.47, 0.5, 2.11);
+}
+.imagemContainer::before{
+    content: 'My Best latest Movies';
+    position: absolute;
+    bottom: -200px;
+    z-index: 2;
+    font-size: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.75, 1.69, 0.5, 2.11);
+}
+.imagemContainer:hover::after{
+    bottom: -80px;
+}
+.imagemContainer:hover::before{
+    bottom: 20px;
+    left: 20px;
+}
